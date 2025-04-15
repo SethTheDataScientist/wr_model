@@ -1,0 +1,14 @@
+name: wr_model
+
+python_env: pyproject.toml
+
+entry_points:
+  data_ingestion:
+    command: "poetry run python data_ingestion/ingest.py"
+
+  model_training:
+    command: "poetry run python model_training/train.py"
+
+  model_evaluation:
+    command: "poetry run python model_evaluation/evaluate.py"
+  

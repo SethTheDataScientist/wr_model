@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/ca15b28735f4487995051dd9949a60e5/artifacts
+end_time: 1744752414965
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: ca15b28735f4487995051dd9949a60e5
+run_name: vaunted-crow-123
+run_uuid: ca15b28735f4487995051dd9949a60e5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744752409933
+status: 3
+tags: []
+user_id: sethl
