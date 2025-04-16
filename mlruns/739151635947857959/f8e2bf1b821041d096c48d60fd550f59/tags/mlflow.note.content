@@ -1,0 +1,3 @@
+Final version of the basic WR model. I feel good about this model, I don't think its overfit, it is getting good test error metrics and the correlation plot is quite accurate. 
+Biggest points are that the data includes college seasons at lower levels (my gm toolbox does not), I didn't include production score, and the monotonic constraints are correct.
+I also filtered out guys who didn't play in the league and am using the bigger train sample with the scaled values for early career and sample weights. 

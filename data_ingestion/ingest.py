@@ -57,10 +57,11 @@ data.select_features = ['ID', 'player_id_x', 'Last_Season', 'Seasons',
                     'RR', 'TPRR', 'YPRR', 'TDPRR', 'ADOT', 'YAC',                     
                     'best_RR', 'best_TPRR',  'best_YPRR', 'best_TDPRR', 'best_ADOT', 'best_YAC',
                     'worst_RR', 'worst_TPRR',  'worst_YPRR', 'worst_TDPRR', 'worst_ADOT', 'worst_YAC',
-                    'Strength_Power 5', 'Filter_NonSeparator', 'Filter_Solid',
+                    'Strength_Power 5', 'Filter_NonSeparator', 'Filter_Solid', 'Filter_Gadget',
                     'ht_in', 'wt', 'arm_in', 'wing_in',
                     'c_reps', 'c_10y', 'c_40y', 'c_vj_in', 'c_bj_in', 'c_3c', 'c_ss20', 'est_40y', 'WAR',
                     'athleticism_score',
+                    #   'production_score'
                     ]
 
 
@@ -68,14 +69,15 @@ data.monotonic_constraints = {
     'Seasons': 0, 
     'ContestedTile': 1,
     'athleticism_score': 1,
+    # 'production_score': 1,
     'Value': 1, 
     'TotalNonSepSeasons': -1, 
     'NonSepPercent': -1,
-    'RR': 1, 'TPRR': 1, 'YPRR': 1, 'TDPRR': 1, 'ADOT': 1, 'YAC': 1,
-    'best_RR': 1, 'best_TPRR': 1,  'best_YPRR': 1, 'best_TDPRR': 1, 'best_ADOT': 1, 'best_YAC': 1,
-    'worst_RR': 1, 'worst_TPRR': 1,  'worst_YPRR': 1, 'worst_TDPRR': 1, 'worst_ADOT': 1, 'worst_YAC': 1,
+    'RR': 1, 'TPRR': 1, 'YPRR': 1, 'TDPRR': 1, 'ADOT': 0, 'YAC': 1,
+    'best_RR': 1, 'best_TPRR': 1,  'best_YPRR': 1, 'best_TDPRR': 1, 'best_ADOT': 0, 'best_YAC': 1,
+    'worst_RR': 1, 'worst_TPRR': 1,  'worst_YPRR': 1, 'worst_TDPRR': 1, 'worst_ADOT': 0, 'worst_YAC': 1,
     'Strength_Power 5': 0,
-    'Filter_NonSeparator': 0, 'Filter_Solid': 0,
+    'Filter_NonSeparator': -1, 'Filter_Solid': 1, 'Filter_Gadget': -1,
     'ht_in': 1, 'wt': 1, 'arm_in': 1, 'wing_in': 1,
     'c_reps': 1, 'c_10y': -1, 'c_40y': -1, 'c_vj_in': 1, 'c_bj_in': 1,
     'c_3c': -1, 'c_ss20': -1, 'est_40y': -1, 'WAR': 1
@@ -94,7 +96,7 @@ data.model_df[bool_cols] = data.model_df[bool_cols].astype(int)
 # Target Variable
 nfl = data.nfl_target.copy()
 
-nfl = nfl[nfl['player_id'].isin(data.player_ids)][['player_id', 'closeness_score']]
+nfl = nfl[nfl['player_id'].isin(data.player_ids)][['player_id', 'new_close_score', 'clean_scaling']]
 
 data.model_df = pd.merge(data.model_df, nfl, how = 'left', left_on = 'player_id_x', right_on = 'player_id')
 
@@ -105,7 +107,7 @@ data.select_features.remove('Last_Season')
 
 data.model_df = data.model_df.drop(columns=['player_id_x', 'player_id'])
 
-data.model_df = data.model_df.rename(columns={'closeness_score': 'target'})
+data.model_df = data.model_df.rename(columns={'new_close_score': 'target'})
 
 # Convert target to percentile
 data.model_df['target'] = data.model_df['target'].astype('float')
@@ -120,7 +122,7 @@ data.model_df = model_functions.impute_all_missing_values(data.model_df, method=
 data.model_df = data.model_df.drop_duplicates()
 
 # Split into training and prediction sets
-data.train_df = data.model_df[data.model_df['Last_Season'] < 2021] 
+data.train_df = data.model_df[data.model_df['Last_Season'] != 2024] 
 data.prediction_set = data.model_df[data.model_df['Last_Season'] != 2024]
 
 data.season_context = data.model_df[['Last_Season']] 

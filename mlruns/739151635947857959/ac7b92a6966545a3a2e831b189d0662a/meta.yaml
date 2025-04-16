@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/ac7b92a6966545a3a2e831b189d0662a/artifacts
+end_time: 1744822283888
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: ac7b92a6966545a3a2e831b189d0662a
+run_name: clean-ray-523
+run_uuid: ac7b92a6966545a3a2e831b189d0662a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744822278893
+status: 3
+tags: []
+user_id: sethl

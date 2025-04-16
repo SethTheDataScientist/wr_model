@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/f8e2bf1b821041d096c48d60fd550f59/artifacts
+end_time: 1744826667750
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: f8e2bf1b821041d096c48d60fd550f59
+run_name: luminous-hare-945
+run_uuid: f8e2bf1b821041d096c48d60fd550f59
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744826663381
+status: 3
+tags: []
+user_id: sethl
