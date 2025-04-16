@@ -25,7 +25,7 @@ data.train_X, data.train_y, data.train_sw,
 data.val_X, data.val_y, data.val_sw,
 data.test_X, data.test_y, data.test_sw] = model_functions.prepare_model_splits(data.train_df, data.select_features)
 
-data.prediction_set = data.prediction_set[data.select_features]
+data.plot_prediction_set = data.prediction_set[data.select_features]
 
 data.full_predictions = data.model_df[data.select_features]
 
@@ -46,7 +46,7 @@ with mlflow.start_run():
         mlflow.log_metric(metric, value)
 
     # Set a tag that we can use to remind ourselves what this run was for
-    mlflow.set_tag("Training Info", "Basic WR model training")
+    mlflow.set_tag("Training Info", "Changed the input data to include best and worst values for radar chart")
 
     # Infer the model signature
     signature = infer_signature(data.train_X, data.best_model.predict(data.train_X))

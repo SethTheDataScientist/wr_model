@@ -52,8 +52,8 @@ if __name__ == "__main__":
 
     # Set the MLflow tracking URI to the local server
     startup()
-    mlflow_proc = start_mlflow_ui()
+    # mlflow_proc = start_mlflow_ui()
     run_data_ingestion()
     run_model_training()
     run_model_evaluation()
-    mlflow_proc.terminate() 
+    # mlflow_proc.terminate() 

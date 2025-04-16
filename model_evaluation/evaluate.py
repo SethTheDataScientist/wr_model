@@ -35,9 +35,9 @@ updated_prediction_set = pd.merge(updated_prediction_set, data.model_df['target'
 updated_prediction_set = updated_prediction_set[['target'] + [col for col in updated_prediction_set.columns if col != 'target']]
 
 
-plot_predictions = data.best_model.predict(data.prediction_set)
-plot_predictions = pd.Series(plot_predictions, index=data.prediction_set.index) 
-plot_df = data.prediction_set.copy()
+plot_predictions = data.best_model.predict(data.plot_prediction_set)
+plot_predictions = pd.Series(plot_predictions, index=data.plot_prediction_set.index) 
+plot_df = data.plot_prediction_set.copy()
 plot_df['predicted_label'] = plot_predictions
 plot_df = pd.merge(plot_df, data.model_df['target'], how = 'left', left_index = True, right_index = True)
 

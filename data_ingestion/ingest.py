@@ -50,32 +50,31 @@ data.filtered_df = pd.get_dummies(data.filtered_df, columns = ['Strength', 'Filt
 data.player_ids = data.filtered_df['player_id_x'].unique()
 
 data.select_features = ['ID', 'player_id_x', 'Last_Season', 'Seasons',
-                    # 'Total_Targets', 
                     'ContestedTile', 
-                    # 'GradeTile', 
-                #    'ADOTTile', 'YPRRTile',
-                    # 'Value', 
+                    'Value', 
                     'TotalNonSepSeasons', 
-                    # 'NonSepPercent',
-                'RR', 'TPRR', 'YPRR', 'TDPRR', 'ADOT', 'YAC', 'Strength_Power 5', 'Filter_NonSeparator', 'Filter_Solid',
+                    'NonSepPercent',
+                    'RR', 'TPRR', 'YPRR', 'TDPRR', 'ADOT', 'YAC',                     
+                    'best_RR', 'best_TPRR',  'best_YPRR', 'best_TDPRR', 'best_ADOT', 'best_YAC',
+                    'worst_RR', 'worst_TPRR',  'worst_YPRR', 'worst_TDPRR', 'worst_ADOT', 'worst_YAC',
+                    'Strength_Power 5', 'Filter_NonSeparator', 'Filter_Solid',
                     'ht_in', 'wt', 'arm_in', 'wing_in',
                     'c_reps', 'c_10y', 'c_40y', 'c_vj_in', 'c_bj_in', 'c_3c', 'c_ss20', 'est_40y', 'WAR',
-                    #   'athleticism_score',
-                        # 'production_score', 
-                    #   'final_score',
-                        # 'imp_grade'
+                    'athleticism_score',
                     ]
 
 
 data.monotonic_constraints = {
     'Seasons': 0, 
-    # 'Total_Targets': 1,
-    'ContestedTile': -1,
-    #   'athleticism_score': 1,
-    # 'GradeTile': 1, 'Value': 1, 
+    'ContestedTile': 1,
+    'athleticism_score': 1,
+    'Value': 1, 
     'TotalNonSepSeasons': -1, 
-    # 'NonSepPercent': 1,
-    'RR': 1, 'TPRR': 1, 'YPRR': 1, 'TDPRR': 1, 'ADOT': 1, 'YAC': 1, 'Strength_Power 5': 0,
+    'NonSepPercent': -1,
+    'RR': 1, 'TPRR': 1, 'YPRR': 1, 'TDPRR': 1, 'ADOT': 1, 'YAC': 1,
+    'best_RR': 1, 'best_TPRR': 1,  'best_YPRR': 1, 'best_TDPRR': 1, 'best_ADOT': 1, 'best_YAC': 1,
+    'worst_RR': 1, 'worst_TPRR': 1,  'worst_YPRR': 1, 'worst_TDPRR': 1, 'worst_ADOT': 1, 'worst_YAC': 1,
+    'Strength_Power 5': 0,
     'Filter_NonSeparator': 0, 'Filter_Solid': 0,
     'ht_in': 1, 'wt': 1, 'arm_in': 1, 'wing_in': 1,
     'c_reps': 1, 'c_10y': -1, 'c_40y': -1, 'c_vj_in': 1, 'c_bj_in': 1,
@@ -95,7 +94,6 @@ data.model_df[bool_cols] = data.model_df[bool_cols].astype(int)
 # Target Variable
 nfl = data.nfl_target.copy()
 
-# nfl = nfl.groupby(['player_id'])['WAR'].mean().reset_index()
 nfl = nfl[nfl['player_id'].isin(data.player_ids)][['player_id', 'closeness_score']]
 
 data.model_df = pd.merge(data.model_df, nfl, how = 'left', left_on = 'player_id_x', right_on = 'player_id')
