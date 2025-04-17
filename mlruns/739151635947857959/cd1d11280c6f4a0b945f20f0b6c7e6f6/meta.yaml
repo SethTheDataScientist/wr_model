@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/cd1d11280c6f4a0b945f20f0b6c7e6f6/artifacts
+end_time: 1744759107782
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: cd1d11280c6f4a0b945f20f0b6c7e6f6
+run_name: useful-midge-924
+run_uuid: cd1d11280c6f4a0b945f20f0b6c7e6f6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744759103705
+status: 3
+tags: []
+user_id: sethl

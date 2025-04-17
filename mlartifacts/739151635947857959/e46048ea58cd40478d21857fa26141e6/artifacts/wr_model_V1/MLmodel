@@ -1,0 +1,49 @@
+artifact_path: wr_model_V1
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 2.21.3
+model_size_bytes: 363251
+model_uuid: 2cda7a2c20a84f60b6e450d0f97de623
+prompts: null
+run_id: e46048ea58cd40478d21857fa26141e6
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "Seasons", "required": true}, {"type": "double",
+    "name": "ContestedTile", "required": true}, {"type": "double", "name": "TotalNonSepSeasons",
+    "required": true}, {"type": "double", "name": "RR", "required": true}, {"type":
+    "double", "name": "TPRR", "required": true}, {"type": "double", "name": "YPRR",
+    "required": true}, {"type": "double", "name": "TDPRR", "required": true}, {"type":
+    "double", "name": "ADOT", "required": true}, {"type": "double", "name": "YAC",
+    "required": true}, {"type": "long", "name": "Strength_Power 5", "required": true},
+    {"type": "long", "name": "Filter_NonSeparator", "required": true}, {"type": "long",
+    "name": "Filter_Solid", "required": true}, {"type": "double", "name": "ht_in",
+    "required": true}, {"type": "double", "name": "wt", "required": true}, {"type":
+    "double", "name": "arm_in", "required": true}, {"type": "double", "name": "wing_in",
+    "required": true}, {"type": "double", "name": "c_reps", "required": true}, {"type":
+    "double", "name": "c_10y", "required": true}, {"type": "double", "name": "c_40y",
+    "required": true}, {"type": "double", "name": "c_vj_in", "required": true}, {"type":
+    "double", "name": "c_bj_in", "required": true}, {"type": "double", "name": "c_3c",
+    "required": true}, {"type": "double", "name": "c_ss20", "required": true}, {"type":
+    "double", "name": "est_40y", "required": true}, {"type": "double", "name": "WAR",
+    "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-04-15 22:52:32.428775'

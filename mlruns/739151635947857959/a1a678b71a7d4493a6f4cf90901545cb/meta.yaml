@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/a1a678b71a7d4493a6f4cf90901545cb/artifacts
+end_time: 1744825467263
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: a1a678b71a7d4493a6f4cf90901545cb
+run_name: amazing-goat-353
+run_uuid: a1a678b71a7d4493a6f4cf90901545cb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744825462848
+status: 3
+tags: []
+user_id: sethl

@@ -31,7 +31,7 @@ output_predictions = pd.Series(output_predictions, index=data.full_predictions.i
 updated_prediction_set = data.full_predictions.copy()
 updated_prediction_set['predicted_label'] = output_predictions
 updated_prediction_set = updated_prediction_set[['predicted_label'] + [col for col in updated_prediction_set.columns if col != 'predicted_label']]
-updated_prediction_set = pd.merge(updated_prediction_set, data.eval_model_df['target'], how = 'left', left_index = True, right_index = True)
+updated_prediction_set = pd.merge(updated_prediction_set, data.model_df['target'], how = 'left', left_index = True, right_index = True)
 updated_prediction_set = updated_prediction_set[['target'] + [col for col in updated_prediction_set.columns if col != 'target']]
 
 
@@ -39,7 +39,7 @@ plot_predictions = data.best_model.predict(data.plot_prediction_set)
 plot_predictions = pd.Series(plot_predictions, index=data.plot_prediction_set.index) 
 plot_df = data.plot_prediction_set.copy()
 plot_df['predicted_label'] = plot_predictions
-plot_df = pd.merge(plot_df, data.eval_model_df['target'], how = 'left', left_index = True, right_index = True)
+plot_df = pd.merge(plot_df, data.model_df['target'], how = 'left', left_index = True, right_index = True)
 
 
 updated_prediction_set = updated_prediction_set.sort_values(by='predicted_label', ascending=False)
@@ -62,4 +62,4 @@ plt.close()
 
 current_year = updated_prediction_set[updated_prediction_set['Last_Season'] == 2024].copy()
 other_prospects = updated_prediction_set[updated_prediction_set['Last_Season'] != 2024].copy()
-current_year.to_csv(f"../mlruns/{data.run_data[1]}/{data.run_data[0]}/output/rb_model_predictions_2024.csv", index = True)
+current_year.to_csv(f"../mlruns/{data.run_data[1]}/{data.run_data[0]}/output/wr_model_predictions_2024.csv", index = True)

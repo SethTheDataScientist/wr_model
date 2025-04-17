@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/5efe537f2fed44d6b42fb243cc433b83/artifacts
+end_time: 1744823411403
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 5efe537f2fed44d6b42fb243cc433b83
+run_name: abrasive-duck-689
+run_uuid: 5efe537f2fed44d6b42fb243cc433b83
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744823407057
+status: 3
+tags: []
+user_id: sethl

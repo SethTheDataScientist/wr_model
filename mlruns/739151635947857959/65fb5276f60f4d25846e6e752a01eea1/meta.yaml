@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/65fb5276f60f4d25846e6e752a01eea1/artifacts
+end_time: 1744753797699
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 65fb5276f60f4d25846e6e752a01eea1
+run_name: angry-whale-386
+run_uuid: 65fb5276f60f4d25846e6e752a01eea1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744753793293
+status: 3
+tags: []
+user_id: sethl

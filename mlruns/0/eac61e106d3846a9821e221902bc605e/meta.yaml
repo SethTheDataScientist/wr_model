@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/eac61e106d3846a9821e221902bc605e/artifacts
+end_time: 1744757368587
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eac61e106d3846a9821e221902bc605e
+run_name: unequaled-fox-756
+run_uuid: eac61e106d3846a9821e221902bc605e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744757362551
+status: 3
+tags: []
+user_id: sethl

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f5ad43b21db24c478ea9a6b00381bb1a/artifacts
+end_time: 1744757279625
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f5ad43b21db24c478ea9a6b00381bb1a
+run_name: merciful-shrike-980
+run_uuid: f5ad43b21db24c478ea9a6b00381bb1a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744757275632
+status: 4
+tags: []
+user_id: sethl

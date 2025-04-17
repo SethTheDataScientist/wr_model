@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/5bdc529a002244058e03f2b8718698d8/artifacts
+end_time: 1744759416751
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 5bdc529a002244058e03f2b8718698d8
+run_name: stylish-donkey-818
+run_uuid: 5bdc529a002244058e03f2b8718698d8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744759412558
+status: 3
+tags: []
+user_id: sethl

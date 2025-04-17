@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/b9c99bd4e7e34b5caba3c06393d56619/artifacts
+end_time: 1744754077479
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: b9c99bd4e7e34b5caba3c06393d56619
+run_name: adorable-kit-935
+run_uuid: b9c99bd4e7e34b5caba3c06393d56619
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744754073143
+status: 3
+tags: []
+user_id: sethl

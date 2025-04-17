@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/f8981d464e31480d9cbbba82acd1c113/artifacts
+end_time: 1744757394045
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: f8981d464e31480d9cbbba82acd1c113
+run_name: useful-newt-526
+run_uuid: f8981d464e31480d9cbbba82acd1c113
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744757374557
+status: 3
+tags: []
+user_id: sethl
