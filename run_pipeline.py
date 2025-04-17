@@ -3,7 +3,7 @@ import os
 import subprocess
 import numpy as np
 
-def start_mlflow_ui(path_to_project: str = "../wr_model", port: int = 5000):
+def start_mlflow_ui(path_to_project: str = "../rb_model", port: int = 5000):
     """
     Starts the MLflow UI in the background using Poetry.
 
@@ -32,17 +32,17 @@ def run_command(command, cwd):
         raise Exception(f"Command failed with return code {result.returncode}")
     
 def startup():
-    run_command("poetry install", cwd=os.path.abspath("../wr_model"))
+    run_command("poetry install", cwd=os.path.abspath("../rb_model"))
     mlflow.set_tracking_uri(uri="http://127.0.0.1:5000")
 
 def run_data_ingestion():
-    run_command("poetry run python ingest.py", cwd=os.path.abspath("../wr_model/data_ingestion"))
+    run_command("poetry run python ingest.py", cwd=os.path.abspath("../rb_model/data_ingestion"))
 
 def run_model_training():
-    run_command("poetry run python train.py", cwd=os.path.abspath("../wr_model/model_training"))
+    run_command("poetry run python train.py", cwd=os.path.abspath("../rb_model/model_training"))
 
 def run_model_evaluation():
-    run_command("poetry run python evaluate.py", cwd=os.path.abspath("../wr_model/model_evaluation"))
+    run_command("poetry run python evaluate.py", cwd=os.path.abspath("../rb_model/model_evaluation"))
 
 if __name__ == "__main__":
     

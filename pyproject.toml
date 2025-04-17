@@ -1,5 +1,5 @@
 [project]
-name = "wr-model"
+name = "rb-model"
 version = "0.1.0"
 description = ""
 authors = [
@@ -21,8 +21,11 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "wr_model", from = "src"}]
+packages = [{include = "rb_model", from = "src"}]
 
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/944033361913629170/918cdbf7318541b5862a3feff7319018/artifacts
+end_time: 1744846232330
+entry_point_name: ''
+experiment_id: '944033361913629170'
+lifecycle_stage: active
+run_id: 918cdbf7318541b5862a3feff7319018
+run_name: orderly-quail-743
+run_uuid: 918cdbf7318541b5862a3feff7319018
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744846227946
+status: 3
+tags: []
+user_id: sethl

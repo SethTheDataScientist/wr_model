@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/944033361913629170/776b96695d624d74aab804fce1505905/artifacts
+end_time: 1744838249690
+entry_point_name: ''
+experiment_id: '944033361913629170'
+lifecycle_stage: active
+run_id: 776b96695d624d74aab804fce1505905
+run_name: puzzled-lynx-722
+run_uuid: 776b96695d624d74aab804fce1505905
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744838245340
+status: 3
+tags: []
+user_id: sethl

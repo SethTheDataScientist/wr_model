@@ -1,0 +1,53 @@
+artifact_path: rb_model_V1
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 2.21.3
+model_size_bytes: 1593418
+model_uuid: eccd4a1a0c644a739f0ee7d9c3a5f445
+prompts: null
+run_id: 776b96695d624d74aab804fce1505905
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "Seasons", "required": true}, {"type": "double",
+    "name": "Attempts", "required": true}, {"type": "double", "name": "ForcedMissedTackleRate",
+    "required": true}, {"type": "double", "name": "ExplosiveRate", "required": true},
+    {"type": "double", "name": "TDP", "required": true}, {"type": "double", "name":
+    "YardsAfterContact", "required": true}, {"type": "double", "name": "YPRR", "required":
+    true}, {"type": "double", "name": "WAR", "required": true}, {"type": "double",
+    "name": "RushWAR", "required": true}, {"type": "double", "name": "RecWAR", "required":
+    true}, {"type": "double", "name": "best_Attempts", "required": true}, {"type":
+    "double", "name": "best_ForcedMissedTackleRate", "required": true}, {"type": "double",
+    "name": "best_ExplosiveRate", "required": true}, {"type": "double", "name": "best_TDP",
+    "required": true}, {"type": "double", "name": "best_YardsAfterContact", "required":
+    true}, {"type": "double", "name": "best_YPRR", "required": true}, {"type": "double",
+    "name": "best_WAR", "required": true}, {"type": "double", "name": "best_RushWAR",
+    "required": true}, {"type": "double", "name": "best_RecWAR", "required": true},
+    {"type": "double", "name": "worst_Attempts", "required": true}, {"type": "double",
+    "name": "worst_ForcedMissedTackleRate", "required": true}, {"type": "double",
+    "name": "worst_ExplosiveRate", "required": true}, {"type": "double", "name": "worst_TDP",
+    "required": true}, {"type": "double", "name": "worst_YardsAfterContact", "required":
+    true}, {"type": "double", "name": "worst_YPRR", "required": true}, {"type": "double",
+    "name": "worst_WAR", "required": true}, {"type": "double", "name": "worst_RushWAR",
+    "required": true}, {"type": "double", "name": "worst_RecWAR", "required": true},
+    {"type": "long", "name": "Strength_Power 5", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-04-16 21:17:25.474351'

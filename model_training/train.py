@@ -29,6 +29,8 @@ data.plot_prediction_set = data.prediction_set[data.select_features]
 
 data.full_predictions = data.model_df[data.select_features]
 
+data.eval_model_df = data.model_df.copy()
+
 data.best_model, data.feature_importances, data.test_predictions, data.best_grid, data.results = model_functions.xgboost_regression_model(data.train_X, data.train_y, data.val_X, data.val_y, data.test_X, data.test_y, 
                             val_sw  = data.val_sw, train_sw  = data.train_sw, test_sw  = data.test_sw,
                             monotonic_constraints=data.monotonic_constraints)
@@ -36,7 +38,7 @@ data.best_model, data.feature_importances, data.test_predictions, data.best_grid
 
 
 # Create a new MLflow Experiment
-mlflow.set_experiment("wr_model_experiment")
+mlflow.set_experiment("rb_model_experiment")
 
 # Start an MLflow run
 with mlflow.start_run():
@@ -48,7 +50,7 @@ with mlflow.start_run():
         mlflow.log_metric(metric, value)
 
     # Set a tag that we can use to remind ourselves what this run was for
-    mlflow.set_tag("Training Info", "Rerun of my favorite model")
+    mlflow.set_tag("Training Info", "Switching to only players with nfl drafted data")
 
     # Infer the model signature
     signature = infer_signature(data.train_X, data.best_model.predict(data.train_X))
@@ -56,10 +58,10 @@ with mlflow.start_run():
     # Log the model
     model_info = mlflow.sklearn.log_model(
         sk_model=data.best_model,
-        artifact_path="wr_model_V1",
+        artifact_path="rb_model_V1",
         signature=signature,
         input_example=data.train_X,
-        registered_model_name="wr_model_V1",
+        registered_model_name="rb_model_V1",
     )
 
     
@@ -70,7 +72,7 @@ with mlflow.start_run():
     data.run_data  = [run_id, experiment_id]
 
 # After processing your data, save all dataframes and check against an existing directory
-result = data.save_dataframes(save_dir=os.path.abspath("../model_evaluation/data"), check_dir=path)
+result = data.save_dataframes(save_dir=os.path.abspath("../model_evaluation/data"))
 
 # See what was saved and what was skipped
 if verbose:

@@ -1,4 +1,4 @@
-name: wr_model
+name: rb_model
 
 python_env: pyproject.toml
 
