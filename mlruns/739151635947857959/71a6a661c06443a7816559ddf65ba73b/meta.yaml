@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/71a6a661c06443a7816559ddf65ba73b/artifacts
+deleted_time: 1744913972309
+end_time: null
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: deleted
+run_id: 71a6a661c06443a7816559ddf65ba73b
+run_name: fun-finch-999
+run_uuid: 71a6a661c06443a7816559ddf65ba73b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744913195007
+status: 1
+tags: []
+user_id: sethl

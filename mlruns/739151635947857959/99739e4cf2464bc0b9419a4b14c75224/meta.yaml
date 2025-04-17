@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/99739e4cf2464bc0b9419a4b14c75224/artifacts
+deleted_time: 1744914211281
+end_time: 1744913815340
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: deleted
+run_id: 99739e4cf2464bc0b9419a4b14c75224
+run_name: rogue-fly-276
+run_uuid: 99739e4cf2464bc0b9419a4b14c75224
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744913563993
+status: 4
+tags: []
+user_id: sethl

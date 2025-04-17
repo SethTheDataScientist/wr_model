@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/88cf77b98fe64683839030619095dc90/artifacts
+end_time: 1744915034665
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 88cf77b98fe64683839030619095dc90
+run_name: stately-worm-429
+run_uuid: 88cf77b98fe64683839030619095dc90
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744915030727
+status: 3
+tags: []
+user_id: sethl

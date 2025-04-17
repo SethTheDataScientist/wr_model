@@ -48,7 +48,7 @@ with mlflow.start_run():
         mlflow.log_metric(metric, value)
 
     # Set a tag that we can use to remind ourselves what this run was for
-    mlflow.set_tag("Training Info", "Rerun of my favorite model")
+    mlflow.set_tag("Training Info", "Imputing athletic data from knn, added in slot rate as features")
 
     # Infer the model signature
     signature = infer_signature(data.train_X, data.best_model.predict(data.train_X))

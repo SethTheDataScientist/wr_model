@@ -54,6 +54,7 @@ data.select_features = ['ID', 'player_id_x', 'Last_Season', 'Seasons',
                     'Value', 
                     'TotalNonSepSeasons', 
                     'NonSepPercent',
+                    'Slot_rate', 'best_Slot_rate', 'worst_Slot_rate',
                     'RR', 'TPRR', 'YPRR', 'TDPRR', 'ADOT', 'YAC',                     
                     'best_RR', 'best_TPRR',  'best_YPRR', 'best_TDPRR', 'best_ADOT', 'best_YAC',
                     'worst_RR', 'worst_TPRR',  'worst_YPRR', 'worst_TDPRR', 'worst_ADOT', 'worst_YAC',
@@ -73,6 +74,7 @@ data.monotonic_constraints = {
     'Value': 1, 
     'TotalNonSepSeasons': -1, 
     'NonSepPercent': -1,
+    'Slot_rate': 0, 'best_Slot_rate': 0, 'worst_Slot_rate': 0,
     'RR': 1, 'TPRR': 1, 'YPRR': 1, 'TDPRR': 1, 'ADOT': 0, 'YAC': 1,
     'best_RR': 1, 'best_TPRR': 1,  'best_YPRR': 1, 'best_TDPRR': 1, 'best_ADOT': 0, 'best_YAC': 1,
     'worst_RR': 1, 'worst_TPRR': 1,  'worst_YPRR': 1, 'worst_TDPRR': 1, 'worst_ADOT': 0, 'worst_YAC': 1,
@@ -116,6 +118,24 @@ data.model_df = model_functions.convert_to_percentile(data.model_df, 'target')
 data.model_df['target'] = data.model_df['target'].apply(
     lambda x: np.random.uniform(0, 0.1) if pd.isna(x) else x
 )
+
+
+# Fill in missing athletic information with knn values
+data.model_df = model_functions.knn_impute_columns(data.model_df, target_columns = [
+                    'ht_in', 'wt', 'arm_in', 'wing_in',
+                    'c_reps', 'c_10y', 'c_40y', 'c_vj_in',
+                      'c_bj_in', 'c_3c', 'c_ss20', 'est_40y'],
+                      feature_columns = [
+                    'ContestedTile', 
+                    'Value', 
+                    'NonSepPercent',
+                    'Slot_rate', 'best_Slot_rate', 'worst_Slot_rate',
+                    'RR', 'TPRR', 'YPRR', 'TDPRR', 'ADOT', 'YAC',                     
+                    'best_RR', 'best_TPRR',  'best_YPRR', 'best_TDPRR', 'best_ADOT', 'best_YAC',
+                    'worst_RR', 'worst_TPRR',  'worst_YPRR', 'worst_TDPRR', 'worst_ADOT', 'worst_YAC',
+                    'Strength_Power 5', 'Filter_NonSeparator', 'Filter_Solid', 'Filter_Gadget',
+                      ], n_neighbors = 5)
+
 
 data.model_df = model_functions.impute_all_missing_values(data.model_df, method='median')
 

@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/f20fea6532cd470699ef9befb546a09c/artifacts
+deleted_time: 1744913972310
+end_time: null
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: deleted
+run_id: f20fea6532cd470699ef9befb546a09c
+run_name: melodic-panda-715
+run_uuid: f20fea6532cd470699ef9befb546a09c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744913436570
+status: 1
+tags: []
+user_id: sethl

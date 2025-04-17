@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1744914293244
+current_stage: None
+description: ''
+last_updated_timestamp: 1744914293244
+name: wr_model_V1
+run_id: a919edaea55e470a8503e74dc39a49e5
+run_link: ''
+source: mlflow-artifacts:/739151635947857959/a919edaea55e470a8503e74dc39a49e5/artifacts/wr_model_V1
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/739151635947857959/a919edaea55e470a8503e74dc39a49e5/artifacts/wr_model_V1
+user_id: null
+version: 29

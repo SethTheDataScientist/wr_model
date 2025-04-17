@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/a919edaea55e470a8503e74dc39a49e5/artifacts
+end_time: 1744914293309
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: a919edaea55e470a8503e74dc39a49e5
+run_name: calm-shrike-483
+run_uuid: a919edaea55e470a8503e74dc39a49e5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744914289524
+status: 3
+tags: []
+user_id: sethl

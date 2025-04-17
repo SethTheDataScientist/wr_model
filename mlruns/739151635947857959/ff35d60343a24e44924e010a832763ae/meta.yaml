@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/ff35d60343a24e44924e010a832763ae/artifacts
+deleted_time: 1744913972309
+end_time: null
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: deleted
+run_id: ff35d60343a24e44924e010a832763ae
+run_name: aged-bee-641
+run_uuid: ff35d60343a24e44924e010a832763ae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744912926194
+status: 1
+tags: []
+user_id: sethl
