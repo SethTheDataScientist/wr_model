@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/5b358f73415444a6b5826d9d279691a7/artifacts
+end_time: 1744985733219
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 5b358f73415444a6b5826d9d279691a7
+run_name: legendary-cub-830
+run_uuid: 5b358f73415444a6b5826d9d279691a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744985729172
+status: 3
+tags: []
+user_id: sethl

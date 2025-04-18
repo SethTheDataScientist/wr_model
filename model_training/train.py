@@ -31,13 +31,13 @@ data.full_predictions = data.model_df[data.select_features]
 
 data.best_model, data.feature_importances, data.test_predictions, data.best_grid, data.results = model_functions.xgboost_regression_model(data.train_X, data.train_y, data.val_X, data.val_y, data.test_X, data.test_y, 
                             val_sw  = data.val_sw, train_sw  = data.train_sw, test_sw  = data.test_sw,
-    #                           param_grid  = {
-    #     'n_estimators': [100, 200, 300],
-    #     'max_depth': [5, 7, 10, 15],
-    #     'learning_rate': [0.05, 0.1, 0.125],
-    #     'subsample': [0.8, 1.0],
-    #     'colsample_bytree': [0.8, 1.0]
-    # },
+                              param_grid  = {
+        'n_estimators': [100, 200, 300],
+        'max_depth': [5, 7, 10, 15],
+        'learning_rate': [0.05, 0.1, 0.125],
+        'subsample': [0.8, 1.0],
+        'colsample_bytree': [0.8, 1.0]
+    },
                             monotonic_constraints=data.monotonic_constraints)
 
 

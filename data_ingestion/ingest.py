@@ -61,8 +61,7 @@ data.select_features = ['ID', 'player_id_x', 'Last_Season', 'Seasons',
                     'Strength_Power 5', 'Filter_NonSeparator', 'Filter_Solid', 'Filter_Gadget',
                     'ht_in', 'wt', 'arm_in', 'wing_in',
                     'c_reps', 'c_10y', 'c_40y', 'c_vj_in', 'c_bj_in', 'c_3c', 'c_ss20', 'est_40y', 'WAR',
-                    'athleticism_score',
-                    #   'production_score'
+                    'athleticism_score'
                     ]
 
 
@@ -70,7 +69,6 @@ data.monotonic_constraints = {
     'Seasons': 0, 
     'ContestedTile': 1,
     'athleticism_score': 1,
-    # 'production_score': 1,
     'Value': 1, 
     'TotalNonSepSeasons': -1, 
     'NonSepPercent': -1,

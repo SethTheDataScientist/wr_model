@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/b7aa1adbdb2e4bcc9b28efb43b49a7f2/artifacts
+end_time: 1744985587450
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: b7aa1adbdb2e4bcc9b28efb43b49a7f2
+run_name: loud-flea-50
+run_uuid: b7aa1adbdb2e4bcc9b28efb43b49a7f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744985582907
+status: 3
+tags: []
+user_id: sethl
