@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/2245407583f842e9950907d9eae03ad3/artifacts
+end_time: 1744939088412
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 2245407583f842e9950907d9eae03ad3
+run_name: legendary-gnu-799
+run_uuid: 2245407583f842e9950907d9eae03ad3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744939084335
+status: 3
+tags: []
+user_id: sethl

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/63a83742298d42a5b8f0c1c110d4a767/artifacts
+end_time: 1744937677582
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 63a83742298d42a5b8f0c1c110d4a767
+run_name: angry-sloth-498
+run_uuid: 63a83742298d42a5b8f0c1c110d4a767
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744937673686
+status: 3
+tags: []
+user_id: sethl

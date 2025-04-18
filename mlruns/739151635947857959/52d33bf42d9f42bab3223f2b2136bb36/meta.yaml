@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/52d33bf42d9f42bab3223f2b2136bb36/artifacts
+end_time: 1744938358708
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 52d33bf42d9f42bab3223f2b2136bb36
+run_name: wistful-croc-842
+run_uuid: 52d33bf42d9f42bab3223f2b2136bb36
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744938354762
+status: 3
+tags: []
+user_id: sethl

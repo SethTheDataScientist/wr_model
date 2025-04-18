@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/7cd3d606531749a4a84b49ab24903b8e/artifacts
+end_time: 1744931909850
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 7cd3d606531749a4a84b49ab24903b8e
+run_name: delightful-shrew-204
+run_uuid: 7cd3d606531749a4a84b49ab24903b8e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744931905924
+status: 3
+tags: []
+user_id: sethl

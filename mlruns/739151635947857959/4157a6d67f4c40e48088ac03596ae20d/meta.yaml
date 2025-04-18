@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/4157a6d67f4c40e48088ac03596ae20d/artifacts
+end_time: 1744940356963
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 4157a6d67f4c40e48088ac03596ae20d
+run_name: fun-foal-445
+run_uuid: 4157a6d67f4c40e48088ac03596ae20d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744940352919
+status: 3
+tags: []
+user_id: sethl

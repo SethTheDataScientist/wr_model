@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/325d424b3b7f454d91e435a2dfc68633/artifacts
+end_time: 1744937929060
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 325d424b3b7f454d91e435a2dfc68633
+run_name: ambitious-lark-55
+run_uuid: 325d424b3b7f454d91e435a2dfc68633
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744937925131
+status: 3
+tags: []
+user_id: sethl

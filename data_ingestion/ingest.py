@@ -85,6 +85,7 @@ data.monotonic_constraints = {
     'c_3c': -1, 'c_ss20': -1, 'est_40y': -1, 'WAR': 1
 }
 
+
 data.filtered_df['draft_day'] = np.where(data.filtered_df['Last_Season'] == 2024, 7, data.filtered_df['draft_day'])
 data.filtered_df = data.filtered_df[data.filtered_df['draft_day'].notna()]
 data.model_df = data.filtered_df[data.select_features]
@@ -124,7 +125,7 @@ data.model_df['target'] = data.model_df['target'].apply(
 data.model_df = model_functions.knn_impute_columns(data.model_df, target_columns = [
                     'ht_in', 'wt', 'arm_in', 'wing_in',
                     'c_reps', 'c_10y', 'c_40y', 'c_vj_in',
-                      'c_bj_in', 'c_3c', 'c_ss20', 'est_40y'],
+                      'c_bj_in', 'c_3c', 'c_ss20', 'est_40y', 'athleticism_score'],
                       feature_columns = [
                     'ContestedTile', 
                     'Value', 

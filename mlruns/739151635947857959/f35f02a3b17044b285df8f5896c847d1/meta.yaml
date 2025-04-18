@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/f35f02a3b17044b285df8f5896c847d1/artifacts
+end_time: 1744940139417
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: f35f02a3b17044b285df8f5896c847d1
+run_name: casual-koi-989
+run_uuid: f35f02a3b17044b285df8f5896c847d1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744940135494
+status: 3
+tags: []
+user_id: sethl
