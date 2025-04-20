@@ -146,8 +146,8 @@ data.prediction_set = data.model_df[data.model_df['Last_Season'] != 2024]
 
 data.season_context = data.model_df[['Last_Season']] 
 
-data.train_df = data.train_df.drop(columns=['Last_Season'])
-data.prediction_set = data.prediction_set.drop(columns=['Last_Season'])
+# data.train_df = data.train_df.drop(columns=['Last_Season'])
+# data.prediction_set = data.prediction_set.drop(columns=['Last_Season'])
 
 # After processing your data, save all dataframes and check against an existing directory
 result = data.save_dataframes(save_dir=os.path.abspath("../model_training/data"), check_dir=path)

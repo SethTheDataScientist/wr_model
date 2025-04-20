@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/141903490691571012
+creation_time: 1744989325473
+experiment_id: '141903490691571012'
+last_update_time: 1744989325473
+lifecycle_stage: active
+name: rb_model_experiment

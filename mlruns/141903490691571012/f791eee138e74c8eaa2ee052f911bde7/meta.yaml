@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/141903490691571012/f791eee138e74c8eaa2ee052f911bde7/artifacts
+end_time: 1744989876747
+entry_point_name: ''
+experiment_id: '141903490691571012'
+lifecycle_stage: active
+run_id: f791eee138e74c8eaa2ee052f911bde7
+run_name: clumsy-sow-775
+run_uuid: f791eee138e74c8eaa2ee052f911bde7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744989872930
+status: 3
+tags: []
+user_id: sethl

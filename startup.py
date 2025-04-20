@@ -28,4 +28,4 @@ def start_mlflow_ui(path_to_project: str = "../wr_model", port: int = 5000):
 
 # Set the MLflow tracking URI to the local server
 mlflow_proc = start_mlflow_ui()
-mlflow_proc.terminate() 
+# mlflow_proc.terminate() 
