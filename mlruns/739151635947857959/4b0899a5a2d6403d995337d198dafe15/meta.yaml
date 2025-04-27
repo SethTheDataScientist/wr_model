@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/4b0899a5a2d6403d995337d198dafe15/artifacts
+end_time: 1745539399170
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 4b0899a5a2d6403d995337d198dafe15
+run_name: skittish-dolphin-753
+run_uuid: 4b0899a5a2d6403d995337d198dafe15
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745539394738
+status: 3
+tags: []
+user_id: sethl

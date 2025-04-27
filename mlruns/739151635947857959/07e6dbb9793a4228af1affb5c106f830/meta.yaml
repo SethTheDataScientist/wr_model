@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/07e6dbb9793a4228af1affb5c106f830/artifacts
+end_time: 1745466860761
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 07e6dbb9793a4228af1affb5c106f830
+run_name: beautiful-shark-985
+run_uuid: 07e6dbb9793a4228af1affb5c106f830
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745466856332
+status: 3
+tags: []
+user_id: sethl

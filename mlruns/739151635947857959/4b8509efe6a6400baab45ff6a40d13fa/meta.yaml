@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/4b8509efe6a6400baab45ff6a40d13fa/artifacts
+end_time: 1745462576950
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 4b8509efe6a6400baab45ff6a40d13fa
+run_name: wistful-doe-729
+run_uuid: 4b8509efe6a6400baab45ff6a40d13fa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745462571816
+status: 3
+tags: []
+user_id: sethl

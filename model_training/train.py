@@ -26,7 +26,7 @@ data.test_X, data.test_y, data.test_sw, data.test_groups] = model_functions.prep
 
 data.plot_prediction_set = data.prediction_set[data.select_features]
 
-data.full_predictions = data.model_df[data.select_features]
+data.full_predictions = data.model_df_knn[data.select_features]
 
 data.best_model, data.feature_importances, data.test_predictions, data.best_grid, data.results,  data.best_group_scores= model_functions.xgboost_regression_model_logo(data.train_X, data.train_y, data.train_groups, data.test_X, data.test_y, 
                             train_sw  = data.train_sw, test_sw  = data.test_sw,
@@ -54,7 +54,7 @@ with mlflow.start_run():
         mlflow.log_metric(metric, value)
 
     # Set a tag that we can use to remind ourselves what this run was for
-    mlflow.set_tag("Training Info", "Leave one group out cross validation")
+    mlflow.set_tag("Training Info", "Adjusted sentiment data and the monotonic constraints for them")
 
     # Infer the model signature
     signature = infer_signature(data.train_X, data.best_model.predict(data.train_X))

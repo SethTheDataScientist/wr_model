@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/ae3d57f948234048aeb617476f6178bc/artifacts
+end_time: 1745538440526
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: ae3d57f948234048aeb617476f6178bc
+run_name: masked-stoat-481
+run_uuid: ae3d57f948234048aeb617476f6178bc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745538436351
+status: 3
+tags: []
+user_id: sethl

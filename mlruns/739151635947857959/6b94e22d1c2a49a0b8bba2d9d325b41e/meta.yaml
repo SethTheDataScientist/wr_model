@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/739151635947857959/6b94e22d1c2a49a0b8bba2d9d325b41e/artifacts
+end_time: 1745708574294
+entry_point_name: ''
+experiment_id: '739151635947857959'
+lifecycle_stage: active
+run_id: 6b94e22d1c2a49a0b8bba2d9d325b41e
+run_name: aged-conch-96
+run_uuid: 6b94e22d1c2a49a0b8bba2d9d325b41e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745708570141
+status: 3
+tags: []
+user_id: sethl

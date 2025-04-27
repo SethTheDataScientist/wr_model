@@ -2,11 +2,44 @@ import sys
 import os
 import pandas as pd
 import numpy as np
+import re
 # Add the parent directory to sys.path
 parent_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 sys.path.insert(0, parent_dir)
 import model_functions
+from sklearn.feature_extraction.text import HashingVectorizer
+import pandas as pd
+import ast
+from sklearn.feature_extraction.text import HashingVectorizer
 
+# First, convert the string representation to actual lists
+def convert_string_to_list(bigram_string):
+    try:
+        if isinstance(bigram_string, str):
+            return ast.literal_eval(bigram_string)
+        else:
+            return []
+    except:
+        return []
+    
+
+def clean_player_column(df, column_name, new_column_name='AltName'):
+    def clean_name(name):
+        # Convert to lowercase
+        alt_name = name.lower()
+        # Remove apostrophes
+        alt_name = re.sub("'", "", alt_name)
+        # Remove punctuation
+        alt_name = re.sub(r"[\"”‘’.,!?;:()\[\]{}\-—_]", "", alt_name)
+        # Remove suffixes
+        alt_name = re.sub(r"\b(jr|sr|ii|iii|iv|v)\b", "", alt_name)
+        # Remove extra spaces
+        alt_name = re.sub(r"\s+", " ", alt_name).strip()
+        return alt_name
+
+    df[new_column_name] = df[column_name].astype(str).apply(clean_name)
+    return df
+ 
 
 # set seed for reproducibility
 np.random.seed(123)
@@ -61,7 +94,8 @@ data.select_features = ['ID', 'player_id_x', 'Last_Season', 'Seasons',
                     'Strength_Power 5', 'Filter_NonSeparator', 'Filter_Solid', 'Filter_Gadget',
                     'ht_in', 'wt', 'arm_in', 'wing_in',
                     'c_reps', 'c_10y', 'c_40y', 'c_vj_in', 'c_bj_in', 'c_3c', 'c_ss20', 'est_40y', 'WAR',
-                    'athleticism_score'
+                    'athleticism_score',
+                    'athleticism_sentiment', 'playmaking_sentiment', 'off-field_sentiment',
                     ]
 
 
@@ -80,13 +114,21 @@ data.monotonic_constraints = {
     'Filter_NonSeparator': -1, 'Filter_Solid': 1, 'Filter_Gadget': -1,
     'ht_in': 1, 'wt': 1, 'arm_in': 1, 'wing_in': 1,
     'c_reps': 1, 'c_10y': -1, 'c_40y': -1, 'c_vj_in': 1, 'c_bj_in': 1,
-    'c_3c': -1, 'c_ss20': -1, 'est_40y': -1, 'WAR': 1
+    'c_3c': -1, 'c_ss20': -1, 'est_40y': -1, 'WAR': 1,
+    'athleticism_sentiment': 1, 'playmaking_sentiment': 1, 'off-field_sentiment': 1, 
 }
 
 
-data.filtered_df['draft_day'] = np.where(data.filtered_df['Last_Season'] == 2024, 7, data.filtered_df['draft_day'])
-data.filtered_df = data.filtered_df[data.filtered_df['draft_day'].notna()]
-data.model_df = data.filtered_df[data.select_features]
+data.filtered_df = clean_player_column(data.filtered_df, 'player_name', new_column_name='player_name')   
+
+data.filtered_df_hash = pd.merge(data.filtered_df, data.WR_full_similar_df[['player_x', 
+                    'athleticism_sentiment', 'playmaking_sentiment', 'off-field_sentiment']], how = 'left', left_on = 'player_name', right_on = 'player_x')
+
+
+
+data.filtered_df_hash['draft_day'] = np.where(data.filtered_df_hash['Last_Season'] == 2024, 7, data.filtered_df_hash['draft_day'])
+data.filtered_df_hash = data.filtered_df_hash[data.filtered_df_hash['draft_day'].notna()]
+data.model_df = data.filtered_df_hash[data.select_features]
 
 # Identify boolean columns
 bool_cols = data.model_df.select_dtypes(include='bool').columns
@@ -120,10 +162,12 @@ data.model_df['target'] = data.model_df['target'].apply(
 
 
 # Fill in missing athletic information with knn values
-data.model_df = model_functions.knn_impute_columns(data.model_df, target_columns = [
+data.model_df_knn = model_functions.knn_impute_columns(data.model_df, target_columns = [
                     'ht_in', 'wt', 'arm_in', 'wing_in',
                     'c_reps', 'c_10y', 'c_40y', 'c_vj_in',
-                      'c_bj_in', 'c_3c', 'c_ss20', 'est_40y', 'athleticism_score'],
+                      'c_bj_in', 'c_3c', 'c_ss20', 'est_40y', 'athleticism_score',                      
+                    'athleticism_sentiment', 'playmaking_sentiment', 'off-field_sentiment'
+                    ],
                       feature_columns = [
                     'ContestedTile', 
                     'Value', 
@@ -136,15 +180,15 @@ data.model_df = model_functions.knn_impute_columns(data.model_df, target_columns
                       ], n_neighbors = 5)
 
 
-data.model_df = model_functions.impute_all_missing_values(data.model_df, method='median')
+data.model_df_knn = model_functions.impute_all_missing_values(data.model_df_knn, method='median')
 
-data.model_df = data.model_df.drop_duplicates()
+data.model_df_knn = data.model_df_knn.drop_duplicates()
 
 # Split into training and prediction sets
-data.train_df = data.model_df[data.model_df['Last_Season'] != 2024] 
-data.prediction_set = data.model_df[data.model_df['Last_Season'] != 2024]
+data.train_df = data.model_df_knn[data.model_df_knn['Last_Season'] != 2024] 
+data.prediction_set = data.model_df_knn[data.model_df_knn['Last_Season'] != 2024]
 
-data.season_context = data.model_df[['Last_Season']] 
+data.season_context = data.model_df_knn[['Last_Season']] 
 
 # data.train_df = data.train_df.drop(columns=['Last_Season'])
 # data.prediction_set = data.prediction_set.drop(columns=['Last_Season'])
