@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/141903490691571012/0f97d3e27cc543cbaf0fcf29ac184c0e/artifacts
+end_time: 1745775624949
+entry_point_name: ''
+experiment_id: '141903490691571012'
+lifecycle_stage: active
+run_id: 0f97d3e27cc543cbaf0fcf29ac184c0e
+run_name: polite-lamb-222
+run_uuid: 0f97d3e27cc543cbaf0fcf29ac184c0e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745775621007
+status: 3
+tags: []
+user_id: sethl
